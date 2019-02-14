@@ -22,14 +22,6 @@ class RestaurantsController < ApplicationController
     end
   end
 
-  def update
-    if @restaurant.update(restaurant_params)
-      redirect_to restaurant_path(@restaurant)
-    else
-      render :edit
-    end
-  end
-
   private
    def restaurant_params
     params.require(:restaurant).permit(:name, :address, :phone_number, :category, :reveiws)

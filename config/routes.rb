@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   resources :restaurants do
-    resources :reviews, only: [ :index, :new, :create ]
+    resources :reviews, only: [ :index, :show, :new, :create ]
   end
-  resources :reviews, only: [ :show, :edit, :update, :destroy ]
+  resources :reviews, only: [ :index, :show, :new, :create ]
   end
   # get 'restaurants/index'
   # get 'restaurants/show'
